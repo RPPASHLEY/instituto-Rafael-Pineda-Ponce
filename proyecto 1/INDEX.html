@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Página Principal</title>
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background-image: url("");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        background-color: #f356cc;
+        padding: 20px 0;
+    }
+
+    .nav-menu {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        margin: 90;
+        padding: 90;
+    }
+
+    .nav-menu li a {
+        text-decoration: none;
+        color: #ffffff;
+        background-color: hsl(319, 80%, 64%);
+        padding: 10px 20px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+        display: inline-block;
+    }
+
+    .nav-menu li a:hover {
+        background-color: #d01d77;
+    }
+
+    .main-content {
+        padding: 90px;
+        margin: 90 auto;
+    }
+
+    .logo {
+        width: 450px; /* Imagen más grande */
+        height: auto;
+        border: 3px solid #ed1fbd;
+        border-radius: 100px;
+    }
+
+    .info-table {
+        border-collapse: collapse;
+        width: 250%; /* Tabla ocupa todo el ancho del contenedor */
+        margin-top: 0px;
+        background-color: #ffffff;
+        box-shadow: 0 0 8px rgba(226, 131, 219, 0.1);
+    }
+
+    .info-table th,
+    .info-table td {
+        border: 1px solid #ccc;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .info-table th {
+        background-color: #e74cc8;
+        color: white;
+    }
+
+    /* Contenedor de la tabla para que sea más ancho */
+    .main-content table tr td:nth-child(2) {
+        width: 300%; /* El 90% del espacio para la tabla */
+    }
+
+    /* Imagen a la izquierda con 20% */
+    .main-content table tr td:nth-child(1) {
+        width: 20%;
+        vertical-align: top;
+    }
+
+    @media screen and (max-width: 768px) {
+        .nav-menu {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .main-content table tr td:nth-child(2),
+        .main-content table tr td:nth-child(1) {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+
+        .logo {
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    .contenedor {
+        width: 300px;
+        height: 300px;
+        margin: 40px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 4px solid #da61ac;
+        border-radius: 20px;
+        overflow: hidden;
+        background-color: #efedf6;
+        perspective: 200px;
+    }
+
+    .rotar {
+        width: 200px;
+        height: 250px;
+        animation: girar 3s linear infinite;
+    }
+
+    @keyframes girar {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Menú de navegación -->
+<nav>
+    <ul class="nav-menu">
+        <li><a href="SOBRE NOS OTROS.html">SOBRE NOSOTROS</a></li>
+        <li><a href="Estudiantes y docentes.html">Docentes y Estudiantes</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="OFERTA ACADEMICA.html">PROGRAMA EDUCATIVO</a></li>
+    </ul>
+</nav>
+
+<!-- Contenido principal con imagen fija y tabla ancha -->
+<div class="main-content">
+    <table>
+        <tr>
+            <td rowspan="2">
+                <!-- Imagen giratoria centrada abajo -->
+<div class="contenedor">
+    <img src="logo.png" alt="Imagen girando" class="rotar" />
+            </td>
+            <td>
+                <table class="info-table">
+                    <thead>
+                        <tr>
+                            <th>Información</th>
+                            <th>Detalles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Instituto</td>
+                            <td>Instituto Técnico Oficial Rafael Pineda Ponce</td>
+                        </tr>
+                        <tr>
+                            <td>Ubicación</td>
+                            <td>Santiago, Tela, Atlántida</td>
+                        </tr>
+                        <tr>
+                            <td>Especialidad</td>
+                            <td>Técnico</td>
+                        </tr>
+                        <tr>
+                            <td>Contacto</td>
+                            <td>info@colegio.tech</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+</div>
+
+</body>
+</html>
+
+
